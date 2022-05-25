@@ -17,9 +17,10 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.heading}>Check Back Later!</h1>
         <Image
-          style={{ opacity: 0.5 }}
-          src="/boards_on_car.jpeg"
+          style={{ opacity: "0.6", filter: "blur(2px)" }}
+          src="/main-landing-defender.jpeg"
           alt="Surfing"
+          objectFit="cover"
           layout="fill"
           priority
         />
