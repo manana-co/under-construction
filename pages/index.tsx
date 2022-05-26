@@ -15,9 +15,9 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.heading}>Check Back Later!</h1>
+        <h1 className={styles.heading}>More to come! -Mañana</h1>
         <Image
-          style={{ opacity: "0.6", filter: "blur(2px)" }}
+          style={{ opacity: "0.3", filter: "blur(3px)" }}
           src="/main-landing-defender.jpeg"
           alt="Surfing"
           objectFit="cover"
