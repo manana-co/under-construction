@@ -1,12 +1,16 @@
 function DefenderIllustration() {
   return (
     <svg
-      x="0px"
-      y="0px"
-      viewBox="0 0 445.1 266"
+      // x="0px"
+      // y="0px"
+      // viewBox="0 0 445.1 266"
       fill="#317491"
       transform="scale(0.5)"
-      style={{ width: "50rem", maxWidth: "calc(100vw - 4rem)" }}
+      style={{
+        width: "28rem",
+        height: "17rem",
+        // maxWidth: "calc(100vw - 2rem)",
+      }}
     >
       <g>
         <g>
