@@ -1,9 +1,6 @@
 function DefenderIllustration() {
   return (
     <svg
-      // x="0px"
-      // y="0px"
-      // viewBox="0 0 445.1 266"
       fill="#317491"
       transform="scale(0.5)"
       style={{

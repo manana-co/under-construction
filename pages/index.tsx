@@ -13,16 +13,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Mañana Co.</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap"
-          rel="stylesheet"
-        />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <main className={styles.main}>
         <Heading size="2xl" color="#317491" fontFamily={heading}>
