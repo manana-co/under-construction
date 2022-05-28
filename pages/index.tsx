@@ -7,6 +7,7 @@ import {
   useTheme,
   Button,
   Flex,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -17,13 +18,12 @@ const Home: NextPage = () => {
   const {
     fonts: { heading, body },
   } = useTheme();
+  const [isSmallerThan500] = useMediaQuery("(max-width: 500px)");
   const [email, setEmail] = useState("");
   const [emailIsValid, setEmailIsValid] = useState(true);
   const [placeholder, setPlaceholder] = useState("");
-  console.log(emailIsValid);
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log("on change");
     if (!emailIsValid) setEmailIsValid(true);
     setEmail(event.target.value);
   };
@@ -32,11 +32,10 @@ const Home: NextPage = () => {
     event.key === "Enter" && submit();
 
   const submit = () => {
-    console.log(email);
     const isEmailValid = !!email.length && false;
     if (!isEmailValid) {
       setEmailIsValid(false);
-      setPlaceholder("Please enter valid email!");
+      setPlaceholder("Enter valid email!");
     }
     setEmail("");
   };
@@ -53,7 +52,18 @@ const Home: NextPage = () => {
         <title>Mañana Co.</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <Box
+        as="main"
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        overflow="hidden"
+        background="#ebe2d7"
+        padding="10px 0"
+        height="100vh"
+        min-height="100vh"
+      >
         <DefenderIllustration />
         <Heading
           size="2xl"
@@ -61,10 +71,19 @@ const Home: NextPage = () => {
           fontFamily={heading}
           width="45rem"
           maxWidth="calc(100vw - 4rem)"
+          margin={isSmallerThan500 ? "" : "20px 0"}
         >
-          More to come! Please give us your email if youd like to know when our
-          store is back up. -Mañana
+          More to come! We&apos;ll email you when our store is back up.
         </Heading>
+        <Flex
+          justifyContent="flex-end"
+          width="40rem"
+          maxWidth="calc(100vw - 4rem)"
+        >
+          <Heading color="#317491" fontFamily={heading}>
+            -Mañana
+          </Heading>
+        </Flex>
         <Box
           width="40rem"
           maxWidth="calc(100vw - 3rem)"
@@ -133,7 +152,7 @@ const Home: NextPage = () => {
             Send it.
           </Button>
         </Flex>
-      </main>
+      </Box>
     </>
   );
 };
