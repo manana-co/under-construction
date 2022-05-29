@@ -61,7 +61,6 @@ const Home: NextPage = () => {
         overflow="hidden"
         background="#ebe2d7"
         padding="10px 0"
-        height="100vh"
         min-height="100vh"
       >
         <DefenderIllustration />
