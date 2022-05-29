@@ -7,7 +7,7 @@ function DefenderIllustration() {
     <Box>
       <svg
         fill="#317491"
-        transform={isSmallerThan500 ? "scale(0.5)" : ""}
+        transform={isSmallerThan500 ? "scale(0.4)" : ""}
         style={{
           width: "28rem",
           height: "17rem",
