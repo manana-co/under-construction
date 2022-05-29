@@ -12,7 +12,6 @@ import {
 import type { NextPage } from "next";
 import Head from "next/head";
 import { DefenderIllustration } from "../components/DefenderIllustration";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const {
@@ -58,10 +57,9 @@ const Home: NextPage = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        overflow="hidden"
         background="#ebe2d7"
         padding="10px 0"
-        min-height="100vh"
+        minHeight="100vh"
       >
         <DefenderIllustration />
         <Heading
